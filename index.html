@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sayantan Bhattacharjee — ALM/PLM Solutions Consultant</title>
+  <meta name="description" content="Sayantan Bhattacharjee — Senior Solutions Consultant specializing in ALM (Codebeamer) and PLM (Windchill) across APAC." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#111a33;
+      --text:#e9ecf5;
+      --muted:#b9c0d9;
+      --line:rgba(255,255,255,.10);
+      --accent:#00bcd4; /* Marina Bay cyan */
+      --accent2:#ff4d6d; /* Tokyo neon red */
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(167,139,250,.22), transparent 60%),
+        radial-gradient(900px 600px at 80% 0%, rgba(125,211,252,.18), transparent 55%),
+        radial-gradient(900px 650px at 60% 80%, rgba(125,211,252,.10), transparent 60%),
+        var(--bg);
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:28px 18px 64px;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,16,32,.55);
+      border:1px solid var(--line);
+      border-radius: 999px;
+      padding:10px 14px;
+      margin: 0 0 22px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 220px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(125,211,252,.10);
+    }
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      text-decoration:none;
+      font-size:13px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      color:var(--muted);
+    }
+    nav a:hover{
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .brand{min-width:auto}
+      nav{justify-content:flex-start}
+    }
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding: 18px 18px;
+      box-shadow: var(--shadow), 0 0 0 1px rgba(0,188,212,0.15);
+    }
+    .headline{
+      margin:0 0 6px 0;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.6px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 15px;
+      max-width: 65ch;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top: 14px;
+    }
+    .chip{
+      font-size: 12.5px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      white-space:nowrap;
+    }
+    .cta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 16px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-size: 13.5px;
+    }
+    .btn.primary{
+      border-color: rgba(125,211,252,.35);
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.14));
+    }
+    .btn:hover{transform: translateY(-1px); transition: transform .12s ease}
+    .kpis{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .kpi{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: rgba(0,0,0,.12);
+    }
+    .kpi strong{font-size: 18px; display:block}
+    .kpi span{color:var(--muted); font-size: 12.5px}
+
+    section{scroll-margin-top: 86px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns:1fr}
+    }
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .item{
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+    .item:first-of-type{border-top:0; padding-top:0}
+    .role{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      flex-wrap:wrap;
+    }
+    .role strong{font-size: 14px}
+    .meta{color:var(--muted); font-size: 12.5px}
+    .bullets{margin:8px 0 0 18px; color:var(--muted); font-size: 13.5px}
+    .bullets li{margin: 6px 0}
+    .cols{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (max-width: 520px){
+      .cols{grid-template-columns:1fr}
+    }
+    .list{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    footer{
+      margin-top: 20px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 12.5px;
+      opacity: .9;
+    }
+    .sep{
+      height:1px; background: var(--line);
+      margin: 14px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div>
+          <strong>Sayantan Bhattacharjee</strong><br/>
+          <span class="meta">Singapore · ALM/PLM Solutions Consultant</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <h1 class="headline">Senior Solutions Consultant for<br/>ALM &amp; PLM in APAC</h1>
+        <p class="sub">
+          Dynamic Solutions Consultant with <strong>11 years</strong> of experience in ALM and PLM presales across the
+          <strong>APAC</strong> and <strong>SRIM</strong> region—helping enterprise teams evaluate, adopt, and scale connected toolchains.
+        </p>
+        <div class="chips" aria-label="Focus areas">
+          <span class="chip">Codebeamer ALM</span>
+          <span class="chip">Windchill PLM</span>
+          <span class="chip">Digital Thread</span>
+          <span class="chip">Enterprise Presales</span>
+          <span class="chip">Executive Workshops</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="mailto:me@sayantan.net">Email: me@sayantan.net</a>
+          <a class="btn" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="sep"></div>
+      </div>
+
+      <div class="card" id="about">
+        <h2>About</h2>
+        <p class="sub" style="margin-top:0">
+          I specialize in translating complex engineering and compliance needs into clear solution narratives—then validating them
+          through high-impact demos, technical evaluations, and executive advisory.
+        </p>
+        <div class="item">
+          <div class="role">
+            <strong>Current</strong>
+            <span class="meta">Singapore</span>
+          </div>
+          <div class="meta">Senior Solutions Consultant · PTC</div>
+        </div>
+        <div class="item">
+          <div class="role">
+            <strong>Industries</strong>
+          </div>
+          <ul class="list">
+            <li>Automotive (OEMs &amp; suppliers)</li>
+            <li>Aerospace &amp; Defense</li>
+            <li>Energy</li>
+            <li>Medical Devices</li>
+            <li>Pharmaceuticals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="card" id="experience">
+        <h2>Experience</h2>
+
+        <div class="item">
+          <div class="role">
+            <strong>Solutions Consultant, Senior · PTC</strong>
+            <span class="meta">Sep 2025 – Present · Singapore</span>
+          </div>
+          <ul class="bullets">
+            <li>Guided enterprise clients through product demonstrations and technical evaluations, aligning ALM &amp; PLM solutions with evolving business requirements.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="role">
+            <strong>Senior Technical Account Manager · Accuris</strong>
+            <span class="meta">Jun 2024 – Aug 2025 · Tokyo</span>
+          </div>
+          <ul class="bullets">
+            <li>Drove strategic consulting across aerospace, automotive, and energy enterprise accounts to expand regional footprint.</li>
+            <li>Influenced deal strategy contributing to a <strong>USD 120K</strong> engineering platform win with a major petrochemical enterprise.</li>
+            <li>Delivered executive technical advisory to align customer engineering workflows with platform capabilities.</li>
+            <li>Achieved highest FY performance rating within nine months of joining.</li>
+            <li>Enabled cross-functional teams to resolve complex technical issues for key APAC clients, improving satisfaction and long-term partnerships.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="role">
+            <strong>Solutions Consulting Supervisor · PTC</strong>
+            <span class="meta">Jun 2019 – Jun 2024 · Tokyo</span>
+          </div>
+          <ul class="bullets">
+            <li>Helped establish APAC Virtual Center of Excellence (VCoE) delivering <strong>600+</strong> engagements/year, creating <strong>USD 15M</strong> pipeline and closing <strong>USD 2M</strong> revenue on average each year.</li>
+            <li>Recruited, trained, and led a high-performing team of Solution Consultants.</li>
+            <li>Served as SME for Codebeamer ALM and Windchill PLM across APAC/ANZ/EMEA for Automotive, A&amp;D, and Medical Device customers.</li>
+            <li>Led executive sessions at the Japan Experience Center across PTC’s portfolio (CAD, PLM, ALM, IoT, AR) and pitched Digital Thread value.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="role">
+            <strong>Senior Systems Engineer (Project Manager) · Infosys Japan</strong>
+            <span class="meta">Jul 2015 – Jun 2019 · Tokyo</span>
+          </div>
+          <ul class="bullets">
+            <li>Led system development/enhancement at a Fortune 100 pharmaceutical company totaling <strong>USD 1M+</strong> across requirements, estimation, coordination, UAT, and releases.</li>
+            <li>Directed cross-functional teams to deliver end-to-end integrations, aligning stakeholder expectations and regulatory needs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div id="skills">
+          <h2>Skills</h2>
+          <div class="cols">
+            <div>
+              <div class="meta" style="margin-bottom:6px">Core</div>
+              <ul class="list">
+                <li>Application Lifecycle Management (Codebeamer)</li>
+                <li>Product Lifecycle Management (Windchill)</li>
+                <li>Presales &amp; Technical Evaluations</li>
+                <li>Executive Workshops &amp; Storytelling</li>
+              </ul>
+            </div>
+            <div>
+              <div class="meta" style="margin-bottom:6px">Technical</div>
+              <ul class="list">
+                <li>Programming</li>
+                <li>Microsoft Azure</li>
+                <li>Amazon AWS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="meta" style="margin:14px 0 6px">Strengths</div>
+          <ul class="list">
+            <li>Relationship building</li>
+            <li>Negotiations</li>
+            <li>Presentation</li>
+            <li>Objection handling</li>
+          </ul>
+        </div>
+
+        <div class="sep"></div>
+
+        <div id="education" style="margin-top:14px">
+          <h2>Education</h2>
+          <div class="item" style="padding-bottom:0">
+            <div class="role">
+              <strong>B.Tech, Computer Science and Engineering</strong>
+              <span class="meta">2015</span>
+            </div>
+            <div class="meta">Maulana Abul Kalam Azad University of Technology · Kolkata · GPA 8.67</div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div id="contact" style="margin-top:14px">
+          <h2>Contact</h2>
+          <p class="sub" style="margin-top:0">
+            Best way to reach me:
+          </p>
+          <div class="cta" style="margin-top:10px">
+            <a class="btn primary" href="mailto:me@sayantan.net">me@sayantan.net</a>
+            <a class="btn" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">linkedin.com/in/sayantanbhattacharjee</a>
+          </div>
+          <p class="meta" style="margin:12px 0 0">
+            © <span id="y"></span> Sayantan Bhattacharjee 
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <span style="color:rgba(233,236,245,.75)">
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
