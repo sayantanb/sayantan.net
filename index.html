@@ -1,268 +1,675 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sayantan Bhattacharjee — ALM/PLM Solutions Consultant</title>
-  <meta name="description" content="Sayantan Bhattacharjee — Senior Solutions Consultant specializing in ALM (Codebeamer) and PLM (Windchill) across APAC." />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sayantan Bhattacharjee — ALM · PLM · MBSE · APAC</title>
+  <meta name="description" content="Senior Solutions Consultant specialising in ALM, PLM, and MBSE for regulated industries across APAC. Based in Singapore."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
   <style>
-    :root{
-      --bg:#0b1020;--card:#111a33;--text:#e9ecf5;--muted:#b9c0d9;
-      --line:rgba(255,255,255,.10);--accent:#00bcd4;--accent2:#ff4d6d;
-      --shadow:0 12px 40px rgba(0,0,0,.35);--radius:18px;
+    :root {
+      --bg: #f7f6f2;
+      --ink: #14120e;
+      --muted: #6b6760;
+      --faint: #e8e6e0;
+      --rule: #d4d1c9;
+      --accent: #1a4f6e;
+      --accent-light: #e8f1f6;
+      --warn: #c0392b;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max: 860px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Noto Sans JP","Segoe UI",Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 700px at 20% 10%,rgba(167,139,250,.22),transparent 60%),
-        radial-gradient(900px 600px at 80% 0%,rgba(125,211,252,.18),transparent 55%),
-        radial-gradient(900px 650px at 60% 80%,rgba(125,211,252,.10),transparent 60%),
-        var(--bg);
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
-      background-size:40px 40px;
-      color:var(--text);line-height:1.55;
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 64px}
-    .topbar{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
-      position:sticky;top:0;backdrop-filter:blur(10px);
-      background:rgba(11,16,32,.55);border:1px solid var(--line);
-      border-radius:999px;padding:10px 14px;margin:0 0 22px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:100;
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Layout ── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0 20px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 64px;
+      position: sticky;
+      top: 0;
+      background: rgba(247,246,242,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 100;
     }
-    .brand{display:flex;align-items:center;gap:10px;min-width:220px}
-    .dot{width:12px;height:12px;border-radius:99px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 4px rgba(125,211,252,.10)}
-    .brand strong{font-size:14px;letter-spacing:.2px}
-    nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    nav a{text-decoration:none;font-size:13px;padding:8px 10px;border-radius:999px;border:1px solid transparent;color:var(--muted)}
-    nav a:hover{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.04)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:10px}
-    @media(max-width:860px){.hero{grid-template-columns:1fr}.brand{min-width:auto}nav{justify-content:flex-start}}
-    .card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border-radius:var(--radius);padding:18px;box-shadow:var(--shadow),0 0 0 1px rgba(0,188,212,0.15)}
-    .headline{margin:0 0 6px;font-size:34px;line-height:1.15;letter-spacing:-0.6px}
-    .sub{margin:0;color:var(--muted);font-size:15px;max-width:65ch}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-    .chip{font-size:12.5px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);white-space:nowrap}
-    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);font-size:13.5px}
-    .btn.primary{border-color:rgba(125,211,252,.35);background:linear-gradient(135deg,rgba(125,211,252,.18),rgba(167,139,250,.14))}
-    .btn:hover{transform:translateY(-1px);transition:transform .12s ease}
-    section{scroll-margin-top:86px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
-    @media(max-width:860px){.grid{grid-template-columns:1fr}}
-    h2{margin:0 0 10px;font-size:16px;letter-spacing:.2px}
-    .item{padding:12px 0;border-top:1px solid var(--line)}
-    .item:first-of-type{border-top:0;padding-top:0}
-    .role{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .role strong{font-size:14px}
-    .meta{color:var(--muted);font-size:12.5px}
-    .bullets{margin:8px 0 0 18px;color:var(--muted);font-size:13.5px}
-    .bullets li{margin:6px 0}
-    .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-    @media(max-width:520px){.cols{grid-template-columns:1fr}}
-    .list{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px}
-    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:12.5px;opacity:.9}
-    .sep{height:1px;background:var(--line);margin:14px 0 0}
-    .badges-row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin-top:12px}
-    .badge-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-    .badge-label{font-size:12px;color:var(--muted);text-align:center;max-width:150px;line-height:1.3}
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 17px;
+      letter-spacing: -0.2px;
+      color: var(--ink);
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ── Hero ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 64px;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--muted);
+    }
+    .hero-lead {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 52ch;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .hero-lead strong { color: var(--ink); font-weight: 500; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: all .15s;
+      letter-spacing: 0.1px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+    .btn-primary:hover { background: #153f58; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+    }
+    .btn-ghost:hover { border-color: var(--ink); background: var(--faint); }
+
+    /* Hero sidebar */
+    .hero-aside { padding-top: 6px; }
+    .stat-block {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 22px 20px;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--faint);
+    }
+    .stat-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .stat-row:first-child { padding-top: 0; }
+    .stat-label { font-size: 12.5px; color: var(--muted); }
+    .stat-val { font-family: var(--serif); font-size: 20px; letter-spacing: -0.3px; }
+    .location-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--muted);
+      background: var(--faint);
+      border-radius: 4px;
+      padding: 7px 10px;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 64px; scroll-margin-top: 90px; }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 10px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      letter-spacing: -0.3px;
+      font-weight: 400;
+    }
+    .section-label {
+      font-size: 11.5px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ── Focus areas ── */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .focus-card {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 18px 16px;
+      background: #fff;
+      transition: border-color .15s;
+    }
+    .focus-card:hover { border-color: var(--accent); }
+    .focus-icon { font-size: 22px; margin-bottom: 10px; }
+    .focus-title { font-size: 13.5px; font-weight: 500; margin-bottom: 6px; color: var(--ink); }
+    .focus-desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+
+    /* ── Experience ── */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--faint);
+    }
+    .exp-item:last-child { border-bottom: 0; }
+    .exp-meta { padding-top: 3px; }
+    .exp-period { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .exp-company {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .exp-location { font-size: 12px; color: var(--muted); }
+    .exp-role { font-size: 15px; font-weight: 500; margin-bottom: 10px; color: var(--ink); }
+    .exp-desc { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; font-weight: 300; }
+    .exp-highlights { list-style: none; padding: 0; }
+    .exp-highlights li {
+      font-size: 13px;
+      color: var(--muted);
+      padding: 4px 0 4px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .exp-highlights li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+      top: 5px;
+    }
+    .exp-highlights li strong { color: var(--ink); font-weight: 500; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .skill-group { }
+    .skill-group-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--faint);
+    }
+    .skill-list { list-style: none; padding: 0; }
+    .skill-list li { font-size: 13px; color: var(--ink); padding: 4px 0; border-bottom: 1px solid var(--faint); }
+    .skill-list li:last-child { border-bottom: 0; }
+
+    /* ── Certifications ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .cert-card {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 20px 18px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cert-badge-wrap { display: flex; justify-content: center; }
+    .cert-name { font-size: 13px; font-weight: 500; color: var(--ink); text-align: center; line-height: 1.4; }
+    .cert-issuer { font-size: 11.5px; color: var(--muted); text-align: center; }
+    .cert-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      align-self: center;
+    }
+    .cert-status.earned {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .cert-status.progress {
+      background: #fff8e1;
+      color: #f57f17;
+    }
+
+    /* ── Education & Contact ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .edu-degree { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    .edu-school { font-size: 13.5px; color: var(--muted); margin-bottom: 2px; }
+    .edu-detail { font-size: 13px; color: var(--muted); }
+
+    .contact-links { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--muted);
+      padding: 10px 14px;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      background: #fff;
+      transition: all .15s;
+    }
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-icon { font-size: 16px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-aside { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .focus-grid { grid-template-columns: 1fr 1fr; }
+      .exp-item { grid-template-columns: 1fr; gap: 4px; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .focus-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+    }
   </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="topbar">
-    <div class="brand">
-      <div class="dot" aria-hidden="true"></div>
-      <div>
-        <strong>Sayantan Bhattacharjee</strong><br/>
-        <span class="meta">Singapore · ALM/PLM Solutions Consultant</span>
-      </div>
-    </div>
-    <nav>
-      <a href="#about">About</a>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-brand">Sayantan Bhattacharjee</div>
+    <div class="nav-links">
+      <a href="#focus">Focus</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#certifications">Certifications</a>
-      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-    </nav>
-  </div>
+    </div>
+  </nav>
 
+  <!-- Hero -->
   <div class="hero">
-    <div class="card">
-      <h1 class="headline">Senior Solutions Consultant for<br/>ALM &amp; PLM in APAC</h1>
-      <p class="sub">
-        Dynamic Solutions Consultant with <strong>11 years</strong> of experience in ALM and PLM presales across the
-        <strong>APAC</strong> and <strong>SRIM</strong> region—helping enterprise teams evaluate, adopt, and scale connected toolchains.
+    <div class="hero-main">
+      <div class="hero-eyebrow">ALM · PLM · MBSE · APAC</div>
+      <h1>The engineer's<br/>advocate in <em>enterprise</em><br/>presales.</h1>
+      <p class="hero-lead">
+        I help <strong>regulated-industry teams</strong> across APAC cut through the noise of toolchain evaluation—
+        translating compliance requirements, MBSE workflows, and safety cases into honest solution narratives
+        that stand up to scrutiny. Specialising in <strong>Codebeamer ALM</strong> and <strong>Windchill PLM</strong> at PTC.
       </p>
-      <div class="chips">
-        <span class="chip">Codebeamer ALM</span>
-        <span class="chip">Windchill PLM</span>
-        <span class="chip">Digital Thread</span>
-        <span class="chip">Enterprise Presales</span>
-        <span class="chip">Executive Workshops</span>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:me@sayantan.net">Get in touch</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-      <div class="cta">
-        <a class="btn primary" href="mailto:me@sayantan.net">Email: me@sayantan.net</a>
-        <a class="btn" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="sep"></div>
     </div>
-
-    <div class="card" id="about">
-      <h2>About</h2>
-      <p class="sub" style="margin-top:0">
-        I specialize in translating complex engineering and compliance needs into clear solution narratives—then validating them
-        through high-impact demos, technical evaluations, and executive advisory.
-      </p>
-      <div class="item">
-        <div class="role"><strong>Current</strong><span class="meta">Singapore</span></div>
-        <div class="meta">Senior Solutions Consultant · PTC</div>
+    <div class="hero-aside">
+      <div class="stat-block">
+        <div class="stat-row">
+          <span class="stat-label">Years in ALM/PLM presales</span>
+          <span class="stat-val">11</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pipeline created (APAC VCoE)</span>
+          <span class="stat-val">$15M</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Avg. annual revenue closed</span>
+          <span class="stat-val">$2M</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Engagements/year delivered</span>
+          <span class="stat-val">600+</span>
+        </div>
       </div>
-      <div class="item">
-        <div class="role"><strong>Industries</strong></div>
-        <ul class="list">
-          <li>Automotive (OEMs &amp; suppliers)</li>
-          <li>Aerospace &amp; Defense</li>
-          <li>Energy</li>
-          <li>Medical Devices</li>
-          <li>Pharmaceuticals</li>
-        </ul>
+      <div class="location-tag">
+        📍 Singapore · APAC &amp; SRIM region
       </div>
     </div>
   </div>
 
-  <div class="grid">
-    <section class="card" id="experience">
+  <!-- Focus -->
+  <section id="focus">
+    <div class="section-header">
+      <h2>Where I focus</h2>
+      <span class="section-label">Industries &amp; Domains</span>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-icon">🫀</div>
+        <div class="focus-title">Medical Devices</div>
+        <div class="focus-desc">IEC 62304, ISO 14971, 21 CFR Part 11. Requirements traceability and V&amp;V workflows for FDA &amp; TGA-regulated device makers.</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">✈️</div>
+        <div class="focus-title">Aerospace &amp; Defense</div>
+        <div class="focus-desc">DO-178C, ARP4754A, AS9100. Systems engineering and certification evidence management for OEMs and Tier 1 suppliers.</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">🚗</div>
+        <div class="focus-title">Automotive</div>
+        <div class="focus-desc">ISO 26262 functional safety, ASPICE process compliance, and variant management for OEMs and suppliers scaling software-defined vehicles.</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">⚙️</div>
+        <div class="focus-title">MBSE &amp; Digital Thread</div>
+        <div class="focus-desc">Model-based systems engineering practices connecting SysML/Cameo with ALM and PLM to create a single, auditable digital thread.</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">⚡</div>
+        <div class="focus-title">Energy</div>
+        <div class="focus-desc">Engineering standards and asset lifecycle management for petrochemical and energy enterprises across the ASEAN region.</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">💊</div>
+        <div class="focus-title">Pharmaceuticals</div>
+        <div class="focus-desc">GxP compliance, validation lifecycle (IQ/OQ/PQ), and regulated document management for regional pharma manufacturers.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-header">
       <h2>Experience</h2>
-      <div class="item">
-        <div class="role">
-          <strong>Solutions Consultant, Senior · PTC</strong>
-          <span class="meta">Sep 2025 – Present · Singapore</span>
+      <span class="section-label">Career history</span>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Sep 2025 – Present</div>
+        <div class="exp-company">PTC</div>
+        <div class="exp-location">Singapore</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Solutions Consultant</div>
+        <div class="exp-desc">
+          Leading technical presales for Codebeamer ALM and Windchill PLM across APAC and SRIM—running discovery, crafting demo narratives, and owning the technical win for regulated-industry accounts in Medical Devices, Aerospace, and Automotive.
         </div>
-        <ul class="bullets">
-          <li>Guided enterprise clients through product demonstrations and technical evaluations, aligning ALM &amp; PLM solutions with evolving business requirements.</li>
+        <ul class="exp-highlights">
+          <li>Primary SC for high-complexity evaluations involving requirements traceability, risk management, and V&amp;V workflows.</li>
+          <li>Building and maintaining enterprise demo environments that reflect real-world compliance scenarios (IEC 62304, ISO 26262, DO-178C).</li>
+          <li>Partnering with Account Executives on deal strategy, RFP responses, and executive-level presentations.</li>
         </ul>
       </div>
-      <div class="item">
-        <div class="role">
-          <strong>Senior Technical Account Manager · Accuris</strong>
-          <span class="meta">Jun 2024 – Aug 2025 · Tokyo</span>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2024 – Aug 2025</div>
+        <div class="exp-company">Accuris</div>
+        <div class="exp-location">Tokyo</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Technical Account Manager</div>
+        <div class="exp-desc">
+          Strategic account management across aerospace, automotive, and energy enterprise accounts in Japan and APAC, aligning engineering standards platform capabilities with customer workflows.
         </div>
-        <ul class="bullets">
-          <li>Drove strategic consulting across aerospace, automotive, and energy enterprise accounts to expand regional footprint.</li>
-          <li>Influenced deal strategy contributing to a <strong>USD 120K</strong> engineering platform win with a major petrochemical enterprise.</li>
-          <li>Delivered executive technical advisory to align customer engineering workflows with platform capabilities.</li>
-          <li>Achieved highest FY performance rating within nine months of joining.</li>
-          <li>Enabled cross-functional teams to resolve complex technical issues for key APAC clients, improving satisfaction and long-term partnerships.</li>
+        <ul class="exp-highlights">
+          <li>Influenced deal strategy that contributed to a <strong>USD 120K</strong> engineering platform win with a major petrochemical enterprise.</li>
+          <li>Delivered executive technical advisory to align engineering standards workflows with platform capabilities.</li>
+          <li>Achieved <strong>highest FY performance rating</strong> within nine months of joining.</li>
+          <li>Resolved complex cross-functional technical issues for key APAC clients, strengthening long-term partnerships.</li>
         </ul>
       </div>
-      <div class="item">
-        <div class="role">
-          <strong>Solutions Consulting Supervisor · PTC</strong>
-          <span class="meta">Jun 2019 – Jun 2024 · Tokyo</span>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2019 – Jun 2024</div>
+        <div class="exp-company">PTC</div>
+        <div class="exp-location">Tokyo</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Solutions Consulting Supervisor</div>
+        <div class="exp-desc">
+          Helped establish and scale PTC's APAC Virtual Center of Excellence (VCoE), building the team and processes that became the engine for enterprise presales across the region.
         </div>
-        <ul class="bullets">
-          <li>Helped establish APAC Virtual Center of Excellence (VCoE) delivering <strong>600+</strong> engagements/year, creating <strong>USD 15M</strong> pipeline and closing <strong>USD 2M</strong> revenue on average each year.</li>
-          <li>Recruited, trained, and led a high-performing team of Solution Consultants.</li>
-          <li>Served as SME for Codebeamer ALM and Windchill PLM across APAC/ANZ/EMEA for Automotive, A&amp;D, and Medical Device customers.</li>
-          <li>Led executive sessions at the Japan Experience Center across PTC's portfolio (CAD, PLM, ALM, IoT, AR) and pitched Digital Thread value.</li>
+        <ul class="exp-highlights">
+          <li>Built and led the VCoE to <strong>600+ engagements/year</strong>, generating <strong>USD 15M in pipeline</strong> and closing <strong>USD 2M revenue</strong> annually on average.</li>
+          <li>Recruited, trained, and mentored a high-performing team of Solutions Consultants across APAC.</li>
+          <li>Served as regional SME for Codebeamer ALM and Windchill PLM across APAC, ANZ, and EMEA for Automotive, A&amp;D, and Medical Device verticals.</li>
+          <li>Led executive-level sessions at PTC's Japan Experience Center spanning CAD, PLM, ALM, IoT, and AR—pitching the Digital Thread vision to C-suite stakeholders.</li>
         </ul>
       </div>
-      <div class="item">
-        <div class="role">
-          <strong>Senior Systems Engineer (Project Manager) · Infosys Japan</strong>
-          <span class="meta">Jul 2015 – Jun 2019 · Tokyo</span>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Jul 2015 – Jun 2019</div>
+        <div class="exp-company">Infosys Japan</div>
+        <div class="exp-location">Tokyo</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Senior Systems Engineer · Project Manager</div>
+        <div class="exp-desc">
+          Led system development and enhancement programmes at a Fortune 100 pharmaceutical company, managing cross-functional delivery across requirements, UAT, and releases.
         </div>
-        <ul class="bullets">
-          <li>Led system development/enhancement at a Fortune 100 pharmaceutical company totaling <strong>USD 1M+</strong> across requirements, estimation, coordination, UAT, and releases.</li>
-          <li>Directed cross-functional teams to deliver end-to-end integrations, aligning stakeholder expectations and regulatory needs.</li>
+        <ul class="exp-highlights">
+          <li>Delivered <strong>USD 1M+</strong> in projects covering requirements analysis, estimation, stakeholder coordination, UAT, and go-live.</li>
+          <li>Directed cross-functional teams on end-to-end system integrations in a GxP-regulated environment.</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="card">
-      <div id="skills">
-        <h2>Skills</h2>
-        <div class="cols">
-          <div>
-            <div class="meta" style="margin-bottom:6px">Core</div>
-            <ul class="list">
-              <li>Application Lifecycle Management (Codebeamer)</li>
-              <li>Product Lifecycle Management (Windchill)</li>
-              <li>Presales &amp; Technical Evaluations</li>
-              <li>Executive Workshops &amp; Storytelling</li>
-            </ul>
-          </div>
-          <div>
-            <div class="meta" style="margin-bottom:6px">Technical</div>
-            <ul class="list">
-              <li>Programming</li>
-              <li>Microsoft Azure</li>
-              <li>Amazon AWS</li>
-            </ul>
-          </div>
-        </div>
-        <div class="meta" style="margin:14px 0 6px">Strengths</div>
-        <ul class="list">
-          <li>Relationship building</li>
-          <li>Negotiations</li>
-          <li>Presentation</li>
-          <li>Objection handling</li>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <span class="section-label">Capabilities</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">ALM / PLM</div>
+        <ul class="skill-list">
+          <li>Codebeamer ALM</li>
+          <li>Windchill PLM</li>
+          <li>Requirements Management</li>
+          <li>Risk &amp; FMEA</li>
+          <li>V&amp;V Traceability</li>
+          <li>Variant Management</li>
         </ul>
       </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Systems Engineering</div>
+        <ul class="skill-list">
+          <li>MBSE / SysML</li>
+          <li>Digital Thread</li>
+          <li>OSLC Integrations</li>
+          <li>ISO 26262 (Automotive)</li>
+          <li>IEC 62304 (MedDev)</li>
+          <li>DO-178C (A&amp;D)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Presales</div>
+        <ul class="skill-list">
+          <li>Technical Evaluations</li>
+          <li>Executive Workshops</li>
+          <li>Demo Engineering</li>
+          <li>RFP Responses</li>
+          <li>Objection Handling</li>
+          <li>Deal Strategy</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Technical</div>
+        <ul class="skill-list">
+          <li>Groovy / REST APIs</li>
+          <li>Microsoft Azure</li>
+          <li>Amazon AWS</li>
+          <li>CBQL Scripting</li>
+          <li>Docker / Linux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-      <div class="sep"></div>
+  <!-- Certifications -->
+  <section id="certifications">
+    <div class="section-header">
+      <h2>Certifications</h2>
+      <span class="section-label">PTC University &amp; beyond</span>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-badge-wrap">
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="ee495b51-e3a6-4d0b-92ee-1d0973cf3db0"
+               data-share-badge-host="https://www.credly.com"></div>
+        </div>
+        <div class="cert-name">Codebeamer Implementation Practitioner</div>
+        <div class="cert-issuer">PTC University · Credly verified</div>
+        <span class="cert-status earned">✓ Earned</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge-wrap">
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="5a729576-7034-48dc-8681-725ae17e60e4"
+               data-share-badge-host="https://www.credly.com"></div>
+        </div>
+        <div class="cert-name">Windchill Implementation Practitioner</div>
+        <div class="cert-issuer">PTC University · Credly verified</div>
+        <span class="cert-status earned">✓ Earned</span>
+      </div>
+      <div class="cert-card" style="border-style: dashed; background: var(--bg);">
+        <div class="cert-badge-wrap" style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:36px;opacity:0.3">🏅</span>
+        </div>
+        <div class="cert-name">Windchill Advanced Configuration</div>
+        <div class="cert-issuer">PTC University</div>
+        <span class="cert-status progress">⏳ In progress</span>
+      </div>
+      <div class="cert-card" style="border-style: dashed; background: var(--bg);">
+        <div class="cert-badge-wrap" style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:36px;opacity:0.3">☁️</span>
+        </div>
+        <div class="cert-name">AWS Solutions Architect Associate</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+        <span class="cert-status progress">⏳ In progress</span>
+      </div>
+    </div>
+  </section>
 
-      <div id="certifications" style="margin-top:14px;scroll-margin-top:86px">
-        <h2>Certifications</h2>
-        <div class="badges-row">
-          <div class="badge-item">
-            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ee495b51-e3a6-4d0b-92ee-1d0973cf3db0" data-share-badge-host="https://www.credly.com"></div>
-            <div class="badge-label">Codebeamer Implementation Practitioner</div>
-          </div>
-          <div class="badge-item">
-            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5a729576-7034-48dc-8681-725ae17e60e4" data-share-badge-host="https://www.credly.com"></div>
-            <div class="badge-label">Windchill Implementation Practitioner</div>
-          </div>
+  <!-- Education + Contact -->
+  <section id="contact">
+    <div class="section-header">
+      <h2>Education &amp; Contact</h2>
+      <span class="section-label">Background</span>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+        <div class="edu-school">Maulana Abul Kalam Azad University of Technology</div>
+        <div class="edu-detail">Kolkata, India · 2015 · GPA 8.67 / 10</div>
+      </div>
+      <div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:me@sayantan.net">
+            <span class="contact-icon">✉️</span> me@sayantan.net
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">
+            <span class="contact-icon">💼</span> linkedin.com/in/sayantanbhattacharjee
+          </a>
+          <a class="contact-link" href="https://sayantan.net">
+            <span class="contact-icon">🌐</span> sayantan.net
+          </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="sep"></div>
+  <footer>
+    <span>© <span id="y"></span> Sayantan Bhattacharjee · Singapore</span>
+    <span>ALM · PLM · MBSE · APAC</span>
+  </footer>
 
-      <div id="education" style="margin-top:14px">
-        <h2>Education</h2>
-        <div class="item" style="padding-bottom:0">
-          <div class="role">
-            <strong>B.Tech, Computer Science and Engineering</strong>
-            <span class="meta">2015</span>
-          </div>
-          <div class="meta">Maulana Abul Kalam Azad University of Technology · Kolkata · GPA 8.67</div>
-        </div>
-      </div>
-
-      <div class="sep"></div>
-
-      <div id="contact" style="margin-top:14px">
-        <h2>Contact</h2>
-        <p class="sub" style="margin-top:0">Best way to reach me:</p>
-        <div class="cta" style="margin-top:10px">
-          <a class="btn primary" href="mailto:me@sayantan.net">me@sayantan.net</a>
-          <a class="btn" href="https://www.linkedin.com/in/sayantanbhattacharjee" target="_blank" rel="noopener">linkedin.com/in/sayantanbhattacharjee</a>
-        </div>
-        <p class="meta" style="margin:12px 0 0">© <span id="y"></span> Sayantan Bhattacharjee</p>
-      </div>
-    </section>
-  </div>
-
-  <footer><span style="color:rgba(233,236,245,.75)"></span></footer>
 </div>
 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
